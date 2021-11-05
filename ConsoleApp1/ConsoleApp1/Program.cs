@@ -10,7 +10,25 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Help");
+            bus myBus = new bus();
+            myBus.init();
+            myBus.print();
+        }
+    }
+    class bus
+    {
+        public string name;
+        public int capacity;
+        public void print()
+        {
+            Console.WriteLine(name);
+            Console.WriteLine(capacity);
+        }
+        public void init()
+        {
+            name = Console.ReadLine();
+            capacity = Convert.ToInt16(Console.ReadLine());
+
         }
     }
 }
